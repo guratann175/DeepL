@@ -16,6 +16,7 @@ time.sleep(5)
 input = driver.find_element(By.XPATH,'/html/body/div[3]/main/div[3]/div[3]/section[1]/div[2]/div[2]/textarea')
 print("アクセス完了")
 
+
 def deepl(string):
 #html(検証)から取得する関数
     input.clear()
