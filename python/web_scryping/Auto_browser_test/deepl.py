@@ -12,6 +12,7 @@ output = deepl_get.deepl(strings)
 sheet.cell(row = 2, column = 3).value = output
 #特定のセルへの書き込み
 book.save('English.xlsx')
+
 #シートの保存　これを行わないと反映されません
 
 
