@@ -1,7 +1,7 @@
 import openpyxl
 
-def input_txt():
-    f = open('English_input.txt', 'r', encoding = 'UTF-8')
+def input_txt(textfile):
+    f = open(textfile, 'r', encoding = 'UTF-8')
     sentence = f.read()
     lists = sentence.split('.')
 
@@ -15,3 +15,4 @@ def input_txt():
 #for文と配列の組み合わせ 配列の要素数を求める関数lenと併用
         sheet.cell(row=i+2, column=2).value = lists[i]
     book.save('English.xlsx')
+    print("エクセルファイルへの書き込みが完了しました")
