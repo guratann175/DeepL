@@ -14,7 +14,8 @@ driver.get(url)
 time.sleep(5)
 #相手のサーバーに負荷をかけないためにも必須な処理
 input = driver.find_element(By.XPATH,'/html/body/div[3]/main/div[3]/div[3]/section[1]/div[2]/div[2]/textarea')
-print("アクセス完了")
+print("アクセス成功")
+
 
 def deepl(string):
 #html(検証)から取得する関数
@@ -32,4 +33,8 @@ def deepl(string):
     print("翻訳完了")
     time.sleep(3)
     return output
+
+def close():
+    driver.close()
+#ブラウザを閉じる
 
