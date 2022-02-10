@@ -14,14 +14,16 @@ options.add_argument('--headless')
 #ブラウザの非表示
 
 #importした際にここの処理を実行されないようにする
-driver = webdriver.Chrome(service = browser)
+driver = webdriver.Chrome(service = browser, options=options)
+#設定したオプションを引数に代入する　ブラウザ非表示
+
 #ブラウザの立ち上げ
 #Serviceオブジェクトにpathを渡してから、webdriverに渡す
 driver.implicitly_wait(3)
 driver.get(url)
 time.sleep(5)
 #相手のサーバーに負荷をかけないためにも必須な処理
-input = driver.find_element(By.XPATH,'/html/body/div[3]/main/div[3]/div[3]/section[1]/div[2]/div[2]/textarea')
+input = driver.find_element(By.XPATH,'/html/body/div[3]/main/div[3]/div[3]/section[1]/div[3]/div[2]/textarea')
 #XPATHで取得したい情報の場所の指定
 print("アクセス成功")
 
